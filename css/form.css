@@ -1,0 +1,15 @@
+select{
+	height: 2.5em;
+	border-radius: 3px;
+	width: 100%;
+	padding:5px;
+}
+.form-control{
+	padding: 10px;
+	width: 100%;
+}
+button{
+	border-radius: 3px;
+	padding:5px;
+	height: 2.5em;
+}

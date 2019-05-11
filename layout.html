@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="shortcut icon" href="img/home-icon.png" type="image/x-icon" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="css/fe8.css" />
+  </head>
+  <body>
+    <nav>
+      <div id="logo">
+        logo
+      </div>
+      <ul class="menu">
+        <li>
+          <a href="#">menu</a>
+          <ul class="sub-menu">
+            <li>sub-menu</li>
+            <li>sub-menu</li>
+            <li>sub-menu</li>
+          </ul>
+        </li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="slider">
+        <img src="img/Slider (1).jpg" style="width:100%" />
+        <img src="img/Slider (2).jpg" style="width:100%" />
+        <img src="img/Slider (3).png" style="width:100%" />
+        <div class="buy-ticket">
+          <div class="tab-titles">
+            <div class="tab" onclick="hienThiTab(0)">Tab1</div>
+            <div class="tab" onclick="hienThiTab(1)">Tab2</div>
+            <div class="tab" onclick="hienThiTab(2)">Tab3</div>
+          </div>
+          <div class="tab-content">
+            <div class="tab-item">item1</div>
+            <div class="tab-item">item2</div>
+            <div class="tab-item">item3</div>
+          </div>
+        </div>
+      </div>
+      <script>
+        var tabIndex = 0;
+        var tabTitles = document.getElementsByClassName("tab");
+        var tabItems = document.getElementsByClassName("tab-item");
+        function hienThiTab(index) {
+          for (i = 0; i < tabItems.length; i++) {
+            tabItems[i].style.display = "none";
+          }
+          for (i = 0; i < tabTitles.length; i++) {
+            tabTitles[i].classList.remove("active");
+          }
+          tabTitles[index].classList.add("active");
+          tabItems[index].style.display = "block";
+          //   console.log("hienthitab" + index);
+        }
+      </script>
+      <div class="promotion">
+        <h3 class="title">Danh sách khuyến mãi</h3>
+        <div class="d-flex">
+          <div class="content">
+            <img src="img/promotion01.jpg" alt="" />
+            <div class="info">abc</div>
+          </div>
+          <div class="content">
+            <img src="img/promotion01.jpg" alt="" />
+          </div>
+          <div class="content">
+            <img src="img/promotion01.jpg" alt="" />
+          </div>
+          <div class="content">
+            <img src="img/promotion01.jpg" alt="" />
+          </div>
+          <div class="content">
+            <img src="img/promotion01.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="services">
+        <div class="content">
+          <div class="logo">
+            <img src="img/time-icon.png" alt="" />
+            <h3>thời gian linh hoạt</h3>
+            <p>
+              film World phục vụ quý khách với nhiều khung giờ khác nhau phù hợp
+              với công việc, đảm bảo quý khách có những khoảng thời gian thật
+              thư giãn với chúng tôi.
+            </p>
+            <ul>
+              <li>Buổi sáng</li>
+              <li>Buổi trưa</li>
+              <li>Buổi chiều</li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <div class="logo">
+            <img src="img/time-icon.png" alt="" />
+            <h3>thời gian linh hoạt</h3>
+            <p>
+              film World phục vụ quý khách với nhiều khung giờ khác nhau phù hợp
+              với công việc, đảm bảo quý khách có những khoảng thời gian thật
+              thư giãn với chúng tôi.
+            </p>
+            <ul>
+              <li>Buổi sáng</li>
+              <li>Buổi trưa</li>
+              <li>Buổi chiều</li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <div class="logo">
+            <img src="img/time-icon.png" alt="" />
+            <h3>thời gian linh hoạt</h3>
+            <p>
+              film World phục vụ quý khách với nhiều khung giờ khác nhau phù hợp
+              với công việc, đảm bảo quý khách có những khoảng thời gian thật
+              thư giãn với chúng tôi.
+            </p>
+            <ul>
+              <li>Buổi sáng</li>
+              <li>Buổi trưa</li>
+              <li>Buổi chiều</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="movies">
+        <div class="tab-titles">
+          <div class="tab active">Tab1</div>
+          <div class="tab">Tab2</div>
+        </div>
+        <div class="row">
+          <div class="content">
+            <div class="movie-image">
+              <img src="img/1.jpg" alt="" />
+              <div class="buy-layer"><button>Buy ticket</button></div>
+            </div>
+            <h4>Movie title</h4>
+          </div>
+          <div class="content">
+            <div class="movie-image">
+              <img src="img/1.jpg" alt="" />
+              <div class="buy-layer"><button>Buy ticket</button></div>
+            </div>
+            <h4>Movie title</h4>
+          </div>
+          <div class="content">
+            <div class="movie-image">
+              <img src="img/1.jpg" alt="" />
+              <div class="buy-layer"><button>Buy ticket</button></div>
+            </div>
+            <h4>Movie title</h4>
+          </div>
+          <div class="content">
+            <div class="movie-image">
+              <img src="img/1.jpg" alt="" />
+              <div class="buy-layer"><button>Buy ticket</button></div>
+            </div>
+            <h4>Movie title</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="content">
+            <div class="movie-image">
+              <img src="img/1.jpg" alt="" />
+              <div class="buy-layer"><button>Buy ticket</button></div>
+            </div>
+            <h4>Movie title</h4>
+          </div>
+          <div class="content">
+            <div class="movie-image">
+              <img src="img/1.jpg" alt="" />
+              <div class="buy-layer"><button>Buy ticket</button></div>
+            </div>
+            <h4>Movie title</h4>
+          </div>
+          <div class="content">
+            <div class="movie-image">
+              <img src="img/1.jpg" alt="" />
+              <div class="buy-layer"><button>Buy ticket</button></div>
+            </div>
+            <h4>Movie title</h4>
+          </div>
+          <div class="content">
+            <div class="movie-image">
+              <img src="img/1.jpg" alt="" />
+              <div class="buy-layer"><button>Buy ticket</button></div>
+            </div>
+            <h4>Movie title</h4>
+          </div>
+        </div>
+      </div>
+      <div class="comments">
+        <div class="content"></div>
+        <div class="content"></div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script>
+      var navbar = document.getElementsByTagName("nav")[0];
+      console.log(navbar);
+      document.onscroll = function() {
+        if (document.documentElement.scrollTop > 80) {
+          navbar.style.width = "100%";
+          navbar.style.top = "0";
+          navbar.style.left = "0";
+        } else {
+          navbar.style.width = "98%";
+          navbar.style.top = "20px";
+          navbar.style.left = "1%";
+        }
+      };
+      var slideItem = document.querySelectorAll(".slider>img");
+      var slideIndex = 0;
+      function slider(index) {
+        for (i = 0; i < slideItem.length; i++) {
+          slideItem[i].style.opacity = "0";
+        }
+        slideItem[index].style.opacity = "1";
+        if (slideIndex === slideItem.length - 1) {
+          slideIndex = 0;
+        } else {
+          slideIndex++;
+        }
+        console.log(slideIndex);
+      }
+      slider(slideIndex);
+      setInterval(function() {
+        slider(slideIndex);
+      }, 3000);
+    </script>
+  </body>
+</html>

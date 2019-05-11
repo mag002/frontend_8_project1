@@ -1,0 +1,23 @@
+ul.tab{
+	list-style: none;
+	padding: 0;
+	margin:0;
+	display: flex;
+	border-bottom: #41c0ed solid 2px;
+	
+}
+ul.tab li{
+	padding: 10px 15px 10px 15px;
+	cursor: pointer;
+}
+.tab a{
+	text-decoration: none;
+	color:#000;
+	
+}
+ul.tab li.tab-item.active{
+	background-color: #41c0ed;
+}
+ul.tab li.tab-item.active a{
+	color:#fff;
+}

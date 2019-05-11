@@ -1,0 +1,36 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  position: relative;
+}
+::-webkit-scrollbar-thumb:before {
+  content: "";
+  width: 500px;
+  height: 500px;
+  background: red;
+  position: absolute;
+  right: 100px;
+}
+
+/* Handle on hover * /
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  } */
+/* #scroll-tooltip {
+  padding: 5px;
+  background: white;
+  position: fixed;
+  right: 5px;
+  top: 0px;
+  z-index: 30;
+  border-radius: 5px;
+} */

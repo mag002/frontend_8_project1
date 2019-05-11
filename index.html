@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Phim rạp</title>
+	<link rel="icon" href="img/home-icon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/tab.css">
+	<link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="css/slide_show_opacity.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/scroll-bar.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row top-header">
+				<div class="col-lg-4"><div class="logo"><span>film </span><span>W<i class="fa fa-globe" aria-hidden="true"></i>RLD</span></div> </div>
+				<nav class="col-lg-8 menu lg-menu dark">
+					<ul>
+						<li class="btn-drop"><a href="#"><i class="fa fa-bars"></i></a></li>
+						<li id="index" class="menu-item active"><a href=""><img src="img/home-icon.png" alt="Trang chủ" style="height:2em;"></a></li>
+						<li class="menu-item"><a href=""><i class="fa fa-camera-retro"></i> <span>Thế giới phim</span> <i class="fa fa-chevron-down"></i></a>
+							<ul>
+								<li class="sub-menu-item"><a href="#">Phim đang chiếu</a></li>
+								<li class="sub-menu-item"><a href="#">Phim sắp chiếu</a></li>
+								<li class="sub-menu-item"><a href="#">Phim Việt Nam <i class="fa fa-chevron-right"></i></a>
+									<ul>
+										<li class="sub-menu-item"><a href="">Tình cảm</a></li>
+										<li class="sub-menu-item"><a href="">Hành động</a></li>
+										<li class="sub-menu-item"><a href="">Hoạt hình</a></li>
+									</ul>
+								</li>
+								<li class="sub-menu-item"><a href="#">Phim dành cho trẻ em</a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href=""><i class="fa fa-file-image-o"></i> <span>Góc điện ảnh</span> <i class="fa fa-chevron-down"></i></a>
+							<ul>
+								<li class="sub-menu-item"><a href="#">Tin tức điện ảnh</a></li>
+								<li class="sub-menu-item"><a href="#">Phố ảnh đẹp</a></li>
+								<li class="sub-menu-item"><a href="#">Người mẫu <i class="fa fa-chevron-right"></i></a>
+									<ul>
+										<li class="sub-menu-item"><a href="">Việt Nam</a></li>
+										<li class="sub-menu-item"><a href="">Châu Á</a></li>
+										<li class="sub-menu-item"><a href="">Châu Âu</a></li>
+									</ul>
+								</li>
+								<li class="sub-menu-item"><a href="#">Diễn viên mới</a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href=""><i class="fa fa-bullhorn"></i>	Khuyến mãi</a></li>
+						<li class="menu-item"><a href=""><i class="fa fa-address-book"></i> <span>Thành viên </span><i class="fa fa-chevron-down"></i></a>
+							<ul>
+								<li class="sub-menu-item"><a href="#"><i class="fa fa-user"></i> Tên đăng nhập</a></li>
+								<li class="sub-menu-item"><a href="#"><i class="fa fa-cogs"></i> Cài đặt</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<section class="container slide-show">
+		<div class="carousel">
+			<div class="slide active" idx="0">
+				<img src="img/Slider (1).jpg" alt="slide 01">
+				<div class="caption"></div>
+			</div>
+			<div class="slide" idx="1">
+				<img src="img/Slider (2).jpg" alt="slide 02">
+				<div class="caption"></div>
+			</div>
+			<div class="slide" idx="2">
+				<img src="img/Slider (3).png" alt="slide 03">
+				<div class="caption"></div>
+			</div>
+		
+		</div>
+		<div class="buy">
+			<ul class="tab">
+				<li class="tab-item active"><a data-target="by-cinema">Theo rạp</a></li>
+				<li class="tab-item"><a data-target="by-film">Theo phim</a></li>
+			</ul>
+			<div id="by-cinema">
+				<div class="form-control">
+					<select name="dllCinema" id="dllCinema">
+						<option value="">Chọn rạp</option>
+						<option value="cine-2">Film World Q1</option>
+						<option value="cine-3">Film World Q1</option>
+						<option value="cine-4">Film World Q1</option>
+						<option value="cine-5">Film World Q1</option>
+						<option value="cine-6">Film World Q1</option>
+					</select>
+				</div>
+				<div class="form-control">
+					<select name="dllDate" id="dllDate">
+						<option value="">Chọn ngày</option>
+						<option value="date-2">Chủ nhật, 28/10/2018</option>
+						<option value="date-3">Thứ 2, 29/10/2018</option>
+						<option value="date-4">Thứ 3, 30/10/2018</option>						
+					</select>
+				</div>
+				<div class="form-control">
+					<select name="dllTime" id="dllTime">
+						<option value="">Chọn suất</option>
+						<option value="date-2">9:45, 2D Phụ đề</option>
+						<option value="date-3">10:45, 2D Phụ đề</option>
+						<option value="date-4">11:00, 2D Phụ đề</option>
+						<option value="date-4">12:15, 2D Phụ đề</option>
+						<option value="date-4">13:45, 2D Phụ đề</option>
+						<option value="date-4">14:45, 2D Phụ đề</option>
+					</select>
+				</div>
+				<div class="form-control">
+					<select name="dllFilm" id="dllFilm">
+						<option value="">Chọn phim</option>
+						<option value="film-2">Phim 2</option>
+						<option value="film-3">Phim 3</option>
+						<option value="film-4">Phim 4</option>
+						<option value="film-5">Phim 5</option>
+						<option value="film-6">Phim 6</option>
+					</select>
+				</div>				
+				<div class="form-control" style="text-align: right;">
+					<button><i class="fa fa-dollar"></i> Mua vé</button>
+				</div>
+			</div>
+			<div id="by-film">
+				<div class="form-control">
+					<select name="dllFilm" id="dllFilm">
+						<option value="">Chọn phim</option>
+						<option value="film-2">Phim 2</option>
+						<option value="film-3">Phim 3</option>
+						<option value="film-4">Phim 4</option>
+						<option value="film-5">Phim 5</option>
+						<option value="film-6">Phim 6</option>
+					</select>
+				</div>
+				<div class="form-control">
+					<select name="dllCinema" id="dllCinema">
+						<option value="">Chọn rạp</option>
+						<option value="cine-2">Film World Q1</option>
+						<option value="cine-3">Film World Q1</option>
+						<option value="cine-4">Film World Q1</option>
+						<option value="cine-5">Film World Q1</option>
+						<option value="cine-6">Film World Q1</option>
+					</select>
+				</div>
+				<div class="form-control">
+					<select name="dllDate" id="dllDate">
+						<option value="">Chọn ngày</option>
+						<option value="date-2">Chủ nhật, 28/10/2018</option>
+						<option value="date-3">Thứ 2, 29/10/2018</option>
+						<option value="date-4">Thứ 3, 30/10/2018</option>						
+					</select>
+				</div>
+				<div class="form-control">
+					<select name="dllTime" id="dllTime">
+						<option value="">Chọn suất</option>
+						<option value="date-2">9:45, 2D Phụ đề</option>
+						<option value="date-3">10:45, 2D Phụ đề</option>
+						<option value="date-4">11:00, 2D Phụ đề</option>
+						<option value="date-4">12:15, 2D Phụ đề</option>
+						<option value="date-4">13:45, 2D Phụ đề</option>
+						<option value="date-4">14:45, 2D Phụ đề</option>
+					</select>
+				</div>								
+				<div class="form-control" style="text-align: right;">
+					<button><i class="fa fa-dollar"></i> Mua vé</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="promotion">
+		<h3>Danh sách khuyến mãi</h3>
+		<ul>
+			<li>
+				<img src="img/promotion01.jpg" alt="">
+				<div class="info">
+					<h2>Xem Phim Quá Đã – Nhận Quà The Coffee House</h2>
+					<p>Từ 24.10-29.10, <b>Galaxy Cinema</b> dành tặng cho các khách hàng thân thiết một phần quà đặc biệt.</p>
+				</div>
+			</li>
+			<li>
+				<img src="img/promotion02.jpg" alt="">
+				<div class="info">
+					<h2>The More The Merrier – Halloween Xôm Tụ</h2>
+					<p>Từ 15.10 – 31.10,<b> Combo Halloween</b> hấp dẫn nhất từ trước đến nay sẽ có mặt tại tất cả các rạp <b>Galaxy Cinema</b> toàn quốc. 
+					</p>					
+				</div>
+			</li>
+			<li>
+				<img src="img/promotion03.jpg" alt="">
+				<div class="info">
+					<h2>Cà The Tẹt Ga – Cuối Tuần Thật Đã</h2>
+					<p>Galaxy Cinema dành tặng các Stars chương trình ưu đãi vô cùng hấp dẫn <b>Cà Thẻ Tẹt Ga – Cuối Tuần Thật Đã</b>.
+					</p>
+				</div>
+			</li>
+			<li>
+				<img src="img/promotion04.jpg" alt="">
+				<div class="info">
+					<h2>Xem Phim Vui – Khui Quà Lớn Tại Galaxy Huỳnh Tấn Phát</h2>
+					<p>Mừng<strong> Galaxy Huỳnh Tấn Phát</strong> tròn 01 tuổi, <b>Galaxy Cinema</b> dành tặng chương trình ưu đãi khủng cho các khách hàng thân thiết.
+					</p>
+				</div>
+			</li>
+			<li>
+				<img src="img/promotion05.jpg" alt="">
+				<div class="info">
+					<h2>Xem Phim Galaxy Cinema – Ăn Pizza Thả Ga</h2>
+					<p>Giúp các Stars vượt qua mùa siêu phẩm- siêu "cháy túi", <b>Galaxy Cinema</b> dành tặng đến 50.000 voucher ăn thỏa thích pizza.
+					</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<section class="container services">
+		<ul class="row">
+			<li class="col-md-4">
+				<div class="service">
+					<img src='img/time-icon.png'/>
+					<h3>Thời gian linh hoạt</h3>
+					<p>film World phục vụ quý khách với nhiều khung giờ khác nhau phù hợp với công việc, đảm bảo quý khách có những khoảng thời gian thật thư giãn với chúng tôi.
+					</p>
+					<ul>
+						<li>Buổi sáng: 8h00 đến 11h30</li>
+						<li>Buổi chiều: 12h30 đến 17h00</li>
+						<li>Buổi tối: 18h00 đến 23h30</li>
+					</ul>
+				</div>
+			</li>
+			<li class="col-md-4">
+				<div class="service">
+					<img src='img/money-icon.png'/>
+					<h3>Giá sinh viên</h3>
+					<p>Với mục đích phục vụ cho tất cả mọi người, mức giá film World đưa ra cho các dịch vụ tuyệt vời của mình là hết sức bất ngờ. Quý khách sẽ được phục vụ tốt nhất với mức giá rẻ chưa từng có.</p>
+					<dl>
+						<dt>Ngày thường</dt>
+						<dd>2D: 50k 3D: 80k</dd>
+						<dt>Ngày lễ, thứ 7, chủ nhật: 70k</dt>
+						<dd>2D: 70k 3D: 100k</dd>
+					</dl>
+				</div>
+			</li>
+			<li class="col-md-4">
+				<div class="service">
+					<img src='img/quality-icon.png'/>
+					<h3>Chất lượng tuyệt đối</h3>
+					<p>"Tiền nào, của đó". film WORLD cam kết sẽ thực hiện tốt nhất các dịch vụ của mình đảm bảo quý khách sẽ cảm thấy hài lòng với số tiền mình bỏ ra.</p>
+					<p>film WORLD áp dụng những công nghệ trình chiếu mới nhất, màn hình rộng chuẩn quốc tế, hình ảnh rõ nét, chất lượng tuyệt mỹ</p>
+					<p>film WORLD cam kết đảm bảo về sức khỏe về mắt với hệ thống kiến trúc ghế ngồi với khoảng cách phù hợp, an toàn.</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<section class="container lst-film">
+		<ul class="tab">
+			<li class="tab-item active"><a data-target="now">Phim đang chiếu</a></li>
+			<li class="tab-item"><a data-target="future">Phim sắp chiếu</a></li>
+		</ul>
+		<ul id="now" class="row">
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/1.jpg" alt="hình" 1="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Vì sao vụt sáng</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/2.jpg" alt="hình" 2="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Kế hoạch đổi chồng</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/3.jpg" alt="hình" 3="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Chân nhỏ bạn ở đâu?</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/4.jpg" alt="hình" 4="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Bào thai quỷ</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/5.jpg" alt="hình" 5="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Thiên thần công lý</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/6.jpg" alt="hình" 6="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Đại chiến thành ANSI</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/7.jpg" alt="hình" 7="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Lời nhắn của oan hồn</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/8.jpg" alt="hình" 8="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Ngôi nhà có chiếc đồng hồ ma thuật</h2>
+			</li>
+		</ul>
+		<ul id="future" class="row">
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/3.jpg" alt="hình" 1="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Chân nhỏ bạn ở đâu?</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/1.jpg" alt="hình" 2="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Vì sao vụt sáng</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/3.jpg" alt="hình" 3="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Chân nhỏ bạn ở đâu?</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/5.jpg" alt="hình" 4="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Thiên thần công lý</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/9.jpg" alt="hình" 5="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Người tù khổ sai</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/10.jpg" alt="hình" 6="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Chú chó Robot</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/7.jpg" alt="hình" 7="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Lời nhắn oan hồn</h2>
+			</li>
+			<li class="col-lg-3 col-md-4 col-sm-6">
+				<div class="img">
+					<img src="img/8.jpg" alt="hình" 8="">
+					<div class="cover">
+						<div class="btn">mua vé</div>
+					</div>
+				</div>
+				<h2>Ngôi nhà có chiếc đồng hồ ma thuật</h2>
+			</li>
+		</ul>
+	</section>
+	<section class="container news">
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Góc bình luận</h3>
+			</div>
+			<div class="col-md-6">
+				<h3>Điện ảnh</h3>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-4"><a href=""><img src="img/entry01.jpg" alt=""></a></div>
+					<div class="col-md-8">
+						<h4>[Review] Bad Times At The El Royale: Trải Nghiệm Kinh Hoàng Ở Khách Sạn Hạng Sang</h4>
+						<p><span class="like"><i class="fa fa-thumbs-o-up"></i>Thích 17</span>&nbsp;<span class="view"><i class="fa fa-group"></i>3409</span>&nbsp;<span class="rating"><i class="fa fa-star"></i> 5</span></p>
+						<p style="line-height:107%">Kể cả khi chiếc quần sắp tụt và mấy múi cơ bụng “thần thánh” của Chris Hemsworth không đủ hấp dẫn bạn, <b>Bad Times At The El Royale</b> vẫn là một bộ <i>phim hay</i> đáng xem.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-4"><a href=""><img src="img/blog01.jpg" alt=""></a></div>
+					<div class="col-md-8">
+						<h4>Học Địa Lý Nước Mỹ Bằng Phim Kinh Dị - Phần 1</h4>
+						<p><span class="like"><i class="fa fa-thumbs-o-up"></i>Thích 17</span>&nbsp;<span class="view"><i class="fa fa-group"></i>3409</span>&nbsp;</p>
+						<p>Vừa xem các bộ phim kinh dị nổi tiếng vừa biết thêm về các bang của nước Mỹ. Một công mà đôi việc nhé!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-4"><a href=""><img src="img/entry02.jpg" alt=""></a></div>
+					<div class="col-md-8">
+						<h4>[Review] Người Bất Tử: Có Quá Nhiều Điều Để Khen Ngợi</h4>
+						<p><span class="like"><i class="fa fa-thumbs-o-up"></i>Thích 17</span>&nbsp;<span class="view"><i class="fa fa-group"></i>3409</span>&nbsp;<span class="rating"><i class="fa fa-star"></i> 5</span></p>
+						<p>Quả không bõ công mong chờ, Người Bất Tử của đạo diễn Victor Vũ thực sự là bộ phim Việt hay nhất trong năm 2018 tính đến thời điểm hiện tại.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-4"><a href=""><img src="img/blog02.jpg" alt=""></a></div>
+					<div class="col-md-8">
+						<h4>14 Rạp Chiếu Phim Mà Bạn Nên Ghé Qua Một Lần Trong Đời</h4>
+						<p><span class="like"><i class="fa fa-thumbs-o-up"></i>Thích 17</span>&nbsp;<span class="view"><i class="fa fa-group"></i>3409</span>&nbsp;</p>
+						<p>14 rạp chiếu phim trong danh sách dưới đây chắc chắn sẽ khiến bạn thay đổi khái niệm hoàn toàn!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<h3>GIỚI THIỆU</h3>
+				<ul>
+					<li><a href="#"><i class="fa fa-arrow-circle-o-right"></i> VỀ CHÚNG TÔI</a></li>
+					<li><a href="#"><i class="fa fa-arrow-circle-o-right"></i> THOẢ THUẬN SỬ DỤNG</a></li>
+					<li><a href="#"><i class="fa fa-arrow-circle-o-right"></i> QUY CHẾ HOẠT ĐỘNG</a></li>
+					<li><a href="#"><i class="fa fa-arrow-circle-o-right"></i> CHÍNH SÁCH BẢO MẬT</a></li>
+				</ul> 
+			</div>
+			<div class="col-md-3">
+				<h3>GÓC ĐIỆN ẢNH</h3>
+				<ul>
+					<li><a href="#"><i class="fa fa-file-video-o"></i> THỂ LOẠI PHIM</a></li>
+					<li><a href="#"><i class="fa fa-file-video-o"></i> BÌNH LUẬN PHIM</a></li>
+					<li><a href="#"><i class="fa fa-file-video-o"></i> BLOG ĐIỆN ẢNH</a></li>
+					<li><a href="#"><i class="fa fa-file-video-o"></i> PHIM HAY THÁNG</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3">
+				<h3>HỖ TRỢ</h3>
+				<ul>
+					<li><a href="#">GÓP Ý</a></li>
+					<li><a href="#">SALE & SERVICES</a></li>
+					<li><a href="#">RẠP / GIÁ VÉ</a></li>
+					<li><a href="#">TUYỂN DỤNG</a></li>
+				</ul> 
+			</div>
+			<div class="col-md-3">
+				<h3>LIÊN KẾT</h3>
+				<ul class="social">
+					<li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+				</ul> 
+				<h3>DOWNLOAD APP</h3>
+				<a href="#"><i class="fa fa-android"></i></a>
+				<a href="#"><i class="fa fa-apple"></i></a>
+			</div>
+		</div>
+	</footer>	
+	<!-- <div id="scroll-tooltip">
+		abc
+	</div> -->
+	<script src='js/menu.js'></script>
+	<script src='js/slide_show_opacity.js'></script>
+	<script src='js/tab.js'></script>
+	<script src='js/script.js'></script>
+	<script src='js/scroll.js'></script>
+</body>
+</html>

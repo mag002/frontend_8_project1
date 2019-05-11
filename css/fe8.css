@@ -1,0 +1,239 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html {
+  background-image: url(../img/movie-details-bg.jpg);
+  background-attachment: fixed;
+}
+nav {
+  display: flex;
+  color: white;
+  min-height: 76px;
+  background: black;
+  position: fixed;
+  top: 20px;
+  left: 1%;
+  width: 98%;
+  z-index: 10;
+  transition: all 0.3s;
+  padding: 0px 5%;
+}
+main {
+  min-height: 600px;
+  /* background: lightcoral; */
+}
+footer {
+  min-height: 300px;
+  background: black;
+}
+.slider {
+  min-height: 100vh;
+  background: lightgreen;
+  position: relative;
+  overflow: hidden;
+}
+.promotion,
+.services,
+.movies,
+.comments {
+  min-height: 300px;
+  background: transparent;
+  /* border-bottom: 1px solid black; */
+}
+.buy-ticket {
+  width: 300px;
+  /* height: 50%; */
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translate(0%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+}
+.content {
+  min-height: 360px;
+  width: 100%;
+  /* background: black; */
+  margin: 10px;
+  position: relative;
+}
+/* .promotion, */
+.services,
+.comments {
+  display: flex;
+}
+.row {
+  display: flex;
+}
+.menu {
+  display: inline-flex;
+  list-style-type: none;
+  padding: 0px;
+}
+#logo {
+  min-width: 30%;
+}
+.menu > li {
+  padding: 20px;
+  position: relative;
+}
+
+.menu > li a {
+  text-decoration: none;
+  color: white;
+}
+.sub-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: black;
+  list-style-type: none;
+  padding: 0px;
+  width: 100%;
+}
+.sub-menu > li {
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.menu > li:hover > .sub-menu > li {
+  max-height: 999px;
+}
+.tab-titles {
+  display: flex;
+  border-bottom: 2px solid #41c0ed;
+}
+.tab {
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.tab.active {
+  background: #41c0ed;
+}
+.tab-content {
+  height: 300px;
+}
+.tab-item {
+  animation: fade 1s;
+  height: 100%;
+  display: none;
+  color: white;
+}
+.slider > img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.d-flex {
+  display: flex;
+}
+.promotion img {
+  width: 100%;
+  vertical-align: middle;
+}
+.title {
+  padding: 18px 15px;
+  color: white;
+  font-family: sans-serif;
+}
+.info {
+  position: absolute;
+  width: 90%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.5s;
+  padding: 10px;
+}
+.promotion .content:hover .info {
+  opacity: 1;
+}
+.services img {
+  max-width: 80px;
+  background: white;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.services .content {
+  padding: 10px;
+  border-radius: 3px;
+  background: black;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+.services .logo {
+  text-align: center;
+}
+.services {
+  color: white;
+  line-height: 35px;
+  font-family: sans-serif;
+}
+.services h3 {
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+.movies .tab-titles {
+  padding: 0px 10px;
+}
+.movies img {
+  width: 100%;
+}
+.movies h4 {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  padding: 20px;
+}
+.row {
+  animation: fade 1s;
+}
+.buy-layer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  max-height: 0px;
+  overflow: hidden;
+}
+.movie-image:hover .buy-layer {
+  max-height: 100vh;
+}
+.movie-image {
+  position: relative;
+}
+.buy-layer button {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  transition: all 0.5s;
+}
+
+.buy-layer button:hover {
+  background: RGBA(255, 165, 0, 0.7);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

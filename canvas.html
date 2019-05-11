@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .controls {
+        padding: 20px;
+      }
+    </style>
+    <div class="container">
+      <canvas></canvas>
+      <div class="controls">
+        <label for="value">Add more data</label>
+        <input type="number" max="500" id="add" />
+        <button id="line">Line</button>
+        <button id="column">Column</button>
+        <p>Your data: <span id="data_value"></span></p>
+      </div>
+    </div>
+    <script>
+      var cellSize = 10;
+      var xGrid = cellSize;
+      var yGrid = cellSize;
+      var canvas = document.querySelector("canvas");
+      var ctx = canvas.getContext("2d");
+      var data_value = document.getElementById("data_value");
+      canvas.width = 1000;
+      canvas.height = 500;
+      function drawGrid() {
+        ctx.beginPath();
+        while (xGrid < canvas.height) {
+          ctx.moveTo(0, xGrid);
+          ctx.lineTo(canvas.width, xGrid);
+          xGrid += cellSize;
+        }
+        while (yGrid < canvas.width) {
+          ctx.moveTo(yGrid, 0);
+          ctx.lineTo(yGrid, canvas.height);
+          yGrid += cellSize;
+        }
+        ctx.strokeStyle = "#d4d4d4";
+        ctx.stroke();
+      }
+      var data = [];
+      var space = 50;
+      var color = [
+        "lightgreen",
+        "lightblue",
+        "lightcoral",
+        "tomato",
+        "yellowgreen"
+      ];
+      function drawChart() {
+        ctx.clearRect(0, 0, 1000, 500);
+
+        ctx.beginPath();
+        ctx.moveTo(0, canvas.height);
+        for (i = 0; i < data.length; i++) {
+          ctx.lineTo(space * (i + 1), canvas.height - data[i]);
+          ctx.fillText(
+            data[i],
+            space * (i + 1) - 10,
+            canvas.height - data[i] - 10
+          );
+        }
+        ctx.strokeStyle = "red";
+        ctx.stroke();
+
+        for (i = 0; i < data.length; i++) {
+          ctx.beginPath();
+          ctx.fillStyle = "black";
+          ctx.arc(space * (i + 1), canvas.height - data[i], 5, 0, 2 * Math.PI);
+          ctx.fill();
+        }
+      }
+      function drawChart2() {
+        ctx.clearRect(0, 0, 1000, 500);
+        ctx.beginPath();
+        ctx.moveTo(0, canvas.height);
+        for (i = 0; i < data.length; i++) {
+          ctx.lineTo(space * i, canvas.height - data[i]);
+          ctx.lineTo(space * (i + 1), canvas.height - data[i]);
+          ctx.lineTo(space * (i + 1), canvas.height);
+          ctx.fillText(data[i], space * i, canvas.height - data[i] - 10);
+        }
+        ctx.fillStyle = `lightcoral`;
+        ctx.strokeStyle = "black";
+        ctx.fill();
+        ctx.stroke();
+      }
+      drawGrid();
+      drawChart2();
+      add.onkeypress = function(event) {
+        if (event.keyCode === 13) {
+          if (
+            event.target.value > 500 ||
+            data.length === 20 ||
+            event.target.value < 0
+          ) {
+            data_value.innerHTML = "ERROR";
+            data_value.style.color = "red";
+            add.value = "";
+          } else {
+            data.push(event.target.value);
+            data_value.innerHTML = data;
+            data_value.style.color = "";
+            drawChart2();
+            add.value = "";
+          }
+        }
+      };
+      line.onclick = function() {
+        drawChart();
+      };
+      column.onclick = function() {
+        drawChart2();
+      };
+    </script>
+  </body>
+</html>

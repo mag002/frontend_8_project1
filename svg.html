@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0px;
+        background: black;
+      }
+      #counter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: red; */
+        z-index: 9;
+      }
+      #per {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: red; */
+        z-index: 9;
+        border: none;
+        background: none;
+        border-bottom: 1px solid lightblue;
+        padding: 10px 0px;
+        font-size: 25px;
+        outline: none;
+        font-family: monospace;
+        color: wheat;
+        text-align: center;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+      }
+    </style>
+    <canvas height="200" width="200" id="counter"></canvas>
+    <input type="number" placeholder="Input percentage" id="per" />
+    <script>
+      var canvas = document.querySelector("canvas");
+      var counter = canvas.getContext("2d");
+      var no = 0;
+      var pointToFill = 4.72;
+      var cw = counter.canvas.width;
+      var ch = counter.canvas.height;
+      var diff;
+
+      function fillCouter(value) {
+        diff = (no / 100) * Math.PI * 2;
+        counter.clearRect(0, 0, cw, ch);
+        counter.lineWidth = 15;
+
+        var gradient = counter.createLinearGradient(0, 0, 170, 0);
+        gradient.addColorStop("0", "lightcoral");
+        gradient.addColorStop("0.5", "lightblue");
+        gradient.addColorStop("1.0", "yellowgreen");
+
+        counter.strokeStyle = gradient;
+        counter.fillStyle = gradient;
+        counter.textAlign = "center";
+        counter.fillText(no + "%", 100, 100);
+        counter.beginPath();
+        counter.arc(100, 100, 90, pointToFill, diff + pointToFill);
+        counter.stroke();
+        counter.font = "25px Monospace";
+        if (no >= value) {
+          clearTimeout(fill);
+        }
+        no++;
+      }
+
+      var fill = setInterval(function() {
+        fillCouter(80);
+      }, 10);
+
+      var per = document.getElementById("per");
+      per.onkeyup = function(event) {
+        clearInterval(fill);
+        if (parseInt(per.value) > 100) {
+          per.value = "";
+          per.value = "100";
+        }
+        if (parseInt(per.value) < 0) {
+          per.value = "";
+          per.value = "0";
+        }
+        if (event.keyCode === 13) {
+          no = 0;
+          counter.clearRect(0, 0, cw, ch);
+          fill = setInterval(function() {
+            fillCouter(event.target.value);
+          }, 10);
+        }
+      };
+    </script>
+  </body>
+</html>
